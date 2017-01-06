@@ -27,7 +27,7 @@ uint64_t* fraction_sqrt(uint64_t n, size_t *len) {
     frac[0] = a;
     *len = 1;
     
-    if (a0 == a) {
+    if (a0 * a0 == (double) n) {
         /* n is a perfect square */
         return frac;
     }

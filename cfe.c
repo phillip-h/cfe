@@ -77,7 +77,7 @@ int main(int argc, char **argv) {
 
     for (int i = 1; i < argc; ++i) {
         size_t len = 0;
-        uint64_t *frac = fraction_sqrt(strtol(argv[i], NULL, 10), &len);
+        uint64_t *frac = fraction_sqrt(strtoull(argv[i], NULL, 10), &len);
         print_fraction(frac, len);
         free(frac);
     }

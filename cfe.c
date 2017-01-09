@@ -15,7 +15,7 @@ void alloc_abort(size_t len) {
  * array and storing the length in *len.
  */
 uint64_t* fraction_sqrt(uint64_t n, size_t *len) {
-    const double a0 = sqrt(n);
+    const long double a0 = sqrt((long double) n);
     uint64_t a = floor(a0);
 
     size_t cap = 4;
@@ -27,7 +27,7 @@ uint64_t* fraction_sqrt(uint64_t n, size_t *len) {
     frac[0] = a;
     *len = 1;
     
-    if (a0 * a0 == (double) n) {
+    if (a0 * a0 == (long double) n) {
         /* n is a perfect square */
         return frac;
     }

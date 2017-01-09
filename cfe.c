@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 void alloc_abort(size_t len) {
-    printf("Error -- failed to allocate %zu bytes.\nAbort.\n", 
+    printf("Error -- failed to allocate %zu bytes.\n", 
             len);
     abort();
 }
